@@ -89,7 +89,7 @@
     Object.keys(components)
     .filter(name => new RegExp(`.*${search}.*`,'g').exec(name))
     .forEach(item => {
-      var li = htmlTag('li', { className: 'Autosuggest-item', innerHTML: item, tabindex: 0, 'data-link': components[item] });
+      var li = htmlTag('li', { className: 'Autosuggest-item', innerHTML: item.split('.')[0], tabindex: 0, 'data-link': components[item] });
       li.addEventListener('click', clickItem);
       li.addEventListener('keydown', enterItem);
       suggestList.appendChild(li);
