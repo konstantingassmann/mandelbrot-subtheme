@@ -1,0 +1,11 @@
+<div class="Header">
+    <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+        {% include 'icons/close-nav.svg' %}
+        {% include 'icons/open-nav.svg' %}
+    </button>
+    <a href="{{ path('/') }}" class="Header-title" data-pjax>{{ frctl.get('project.title') | default('Component Library') }}</a>
+    
+    <form class="Autosuggest">
+      <input class="Autosuggest-search" type="text" placeholder="suchen">
+    </form>
+</div>

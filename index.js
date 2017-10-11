@@ -7,8 +7,9 @@ const mandelbrot = require('@frctl/mandelbrot');
  * Configure the theme
  */
 const subTheme = mandelbrot({
-    skin: "fuchsia",
-    styles: ['default', '/_subtheme/tweaks.css'] // link to the default stylesheet followed by a custom one
+    skin: 'yellow',
+    styles: ['default', '/_subtheme/tweaks.css'],
+    scripts: ['default', '/_subtheme/js/header.js']
 });
 
 /*

@@ -1,0 +1,26 @@
+.Header {
+  padding-right: 10px;
+}
+  
+.Header > .Autosuggest {
+  margin-left: auto;
+}
+
+.Autosuggest {
+  position: relative;
+}
+
+.Autosuggest-flyout {
+  position: absolute;
+  background: white;
+  border: 1px solid black;
+}
+
+.Autosuggest-item {
+  border-bottom: 1px solid black;
+  padding: 5px;
+}
+
+.Autosuggest-item:last-child {
+  border-bottom: 0;
+}
