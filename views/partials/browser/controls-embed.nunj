@@ -1,0 +1,24 @@
+{% import "macros/image.nunj" as img %}
+
+<div class="Browser-controls">
+    <ul class="Browser-tabs">
+        <li class="Browser-tab Browser-tab--preview is-active" data-role="tab">
+            <a href="#browser-{{ entity.id }}-panel-preview">Preview</a>
+        </li>
+        {% for panel in frctl.theme.get('panels') %}
+        {% if panel == 'resources' %}
+        {% for collection in entity.resources().items() %}
+        {% if collection.size %}
+        <li class="Browser-tab Browser-tab--resources{% if not collection.size %} is-disabled{% endif %}" data-role="tab">
+            <a href="#browser-{{ entity.id }}-panel-{{ collection.name }}">{{ collection.label }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+        {% else %}
+        <li class="Browser-tab Browser-tab--{{ panel }}" data-role="tab">
+            <a href="#browser-{{ entity.id }}-panel-{{ panel }}">{% if panel == 'html' %}HTML{% else %}{{ panel | capitalize }}{% endif %}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div>

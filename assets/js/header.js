@@ -99,6 +99,9 @@
   var loaded = function() {
     
     element = document.querySelector('.Autosuggest');
+    if(!element) {
+      return;
+    }
     
     var links = document.querySelectorAll('.Tree-entityLink');
     for(var key in links) {

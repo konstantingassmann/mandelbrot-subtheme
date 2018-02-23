@@ -1,0 +1,4 @@
+<div class="Browser-panel Browser-comments" data-role="tab-panel" id="browser-{{ entity.id }}-panel-comments">
+  <div class="mgs-show-comments"></div>
+  <script async src="https://meine.gelbeseiten.de/js/comments.js"></script>
+</div>

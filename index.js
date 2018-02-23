@@ -9,8 +9,14 @@ const mandelbrot = require('@frctl/mandelbrot');
 const subTheme = mandelbrot({
     skin: 'yellow',
     styles: ['default', '/_subtheme/tweaks.css'],
-    scripts: ['default', '/_subtheme/js/header.js']
+    scripts: ['default', '/_subtheme/js/header.js'],
+    panels: ["html", "view", "context", "resources", "info", "notes"]
 });
+
+subTheme.addRoute('/components/embed/:handle', {
+    handle: 'embed',
+    view: 'pages/components/embed.nunj'
+}, mandelbrot.getHandles);
 
 /*
  * Specify a template directory to override any view templates

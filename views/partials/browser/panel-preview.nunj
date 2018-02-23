@@ -1,0 +1,27 @@
+<div class="Browser-panel Browser-preview" data-role="tab-panel" id="browser-{{ entity.id }}-panel-preview">
+  {% include "partials/pen/preview-embed.nunj" %}
+</div>
+
+<style>
+  .Browser-preview {
+    padding: 0;
+    position: relative;
+  }
+  
+  .Browser-preview .Pen-preview {
+    width: 100%;
+    margin: 0;
+    height: auto !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-height: none;
+  }
+  
+  .Browser-preview .Preview-wrapper {
+    min-width: 100%;
+  }
+  
+</style>
