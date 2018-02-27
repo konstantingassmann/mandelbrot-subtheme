@@ -57,7 +57,7 @@
             <span class="Meta-value">
               <code class="Code Code--lang-html">
                 {% set rendered = '<gs-component data-name="'~entity.handle~'"></gs-component>
-                <script src="http://master-7rqtwti-64pdg5cscw3qe.eu.platform.sh/js/embed.js"></script>' %}
+                <script id="gs-component-embed" src="http://master-7rqtwti-64pdg5cscw3qe.eu.platform.sh/js/embed.js"></script>' %}
                 <pre>{{ rendered | beautify | highlight('html') }}</pre>
               </code>
             </span>
