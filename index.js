@@ -16,7 +16,26 @@ const subTheme = mandelbrot({
 subTheme.addRoute('/components/embed/:handle', {
     handle: 'embed',
     view: 'pages/components/embed.nunj'
-}, mandelbrot.getHandles);
+}, getHandles);
+
+// copied from of @frctl/mandelbrot/src/theme.js wont't work when used from base theme
+let handles = null;
+
+function getHandles(app) {
+    app.components.on('updated', () => (handles = null));
+    if (handles) {
+        return handles;
+    }
+    handles = [];
+    app.components.flatten().each(comp => {
+        handles.push(comp.handle);
+        if (comp.variants().size > 1) {
+            comp.variants().each(variant => handles.push(variant.handle));
+        }
+    });
+    handles = handles.map(h => ({handle: h}));
+    return handles;
+}
 
 /*
  * Specify a template directory to override any view templates
