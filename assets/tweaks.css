@@ -1,3 +1,7 @@
+body {
+  font-family: 'TheSansB4', Helvetica, Arial, sans-serif
+}
+
 .Header {
   padding-right: 10px;
 }
@@ -19,8 +23,17 @@
 .Autosuggest-item {
   border-bottom: 1px solid black;
   padding: 5px;
+  cursor: pointer;
 }
 
 .Autosuggest-item:last-child {
   border-bottom: 0;
+}
+
+.Tree-collection:not(.is-closed) {
+  background: #eee;
+}
+
+.Tree-collectionLabel {
+  color: black;
 }
