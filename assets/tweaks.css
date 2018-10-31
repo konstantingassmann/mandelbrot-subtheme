@@ -37,3 +37,8 @@ body {
 .Tree-collectionLabel {
   color: black;
 }
+
+.Prose {
+  max-width: none;
+  font-family: inherit;
+}
