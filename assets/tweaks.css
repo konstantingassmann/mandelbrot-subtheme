@@ -42,3 +42,7 @@ body {
   max-width: none;
   font-family: inherit;
 }
+
+.Prose table {
+  font-size: inherit;
+}
