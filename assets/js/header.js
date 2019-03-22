@@ -113,7 +113,7 @@
     }
     
     input = element.querySelector('.Autosuggest-search');
-    // input.addEventListener('keyup', filter);
+    input.addEventListener('keyup', filter);
   }
 
   document.addEventListener('DOMContentLoaded', loaded);
