@@ -3,7 +3,10 @@
         {% include 'icons/close-nav.svg' %}
         {% include 'icons/open-nav.svg' %}
     </button>
-    <a href="{{ path('/') }}" class="Header-title" data-pjax>{{ frctl.get('project.title') | default('Component Library') }}</a>
+    <a href="{{ path('/') }}" class="Header-title" data-pjax>
+      <img class="Header-logo" src="https://www.gelbeseiten.de/web/images/gelbe-seiten-logo.svg" width="235" height="33" alt="Gelbe Seiten Unternehmen finden">
+      {{ frctl.get('project.title') | default('Component Library') }}
+    </a>
     
     <form class="Autosuggest">
       <input class="Autosuggest-search" type="text" placeholder="suchen">
