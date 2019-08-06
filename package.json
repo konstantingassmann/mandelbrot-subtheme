@@ -1,6 +1,6 @@
 {
   "name": "mandelbrot-subtheme",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Fractal theme, based on Mandelbrot.",
   "main": "index.js",
   "dependencies": {
