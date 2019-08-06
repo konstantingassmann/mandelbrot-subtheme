@@ -66,3 +66,7 @@ a {
   font-size: inherit;
   font-weight: inherit;
 }
+
+.Autosuggest-search {
+  padding: 12px;
+}
