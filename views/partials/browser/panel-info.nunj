@@ -63,4 +63,44 @@
             </span>
         </li>
     </ul>
+    <script>
+       generateCopyButtons();
+
+       function generateCopyButtons() {
+           var browserCodes = document.querySelectorAll(".Browser-code");
+           console.log(browserCodes);
+           if (browserCodes.length > 2) {
+
+               // We only the to copy the first two views
+               for (var index = 0; index < 2; index++) {
+                   var element = document.createElement("input");
+                   element.type = "button"
+                   element.value = "copy"
+                   element.style.width = "80px"
+                   element.style.height = "40px"
+                   element.style.backgroundColor = "#ccc"
+                   element.style.borderRadius = "5px"
+                   element.style.position = "absolute"
+                   element.style.right = "10px"
+
+                   element.addEventListener("click", function () {
+
+                       var codeBlock = this.parentElement;
+                       var text = codeBlock.textContent;
+
+                       var textArea = document.createElement("textarea");
+                       textArea.value = text;
+                       document.body.appendChild(textArea);
+                       textArea.select();
+                       document.execCommand("Copy");
+                       textArea.remove();
+                   });
+
+                   browserCodes[index].appendChild(element);
+               }
+           }
+       }
+
+    </script>
+
 </div>
