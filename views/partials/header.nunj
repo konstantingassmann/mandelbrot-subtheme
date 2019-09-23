@@ -7,39 +7,4 @@
     <form class="Autosuggest">
       <input class="Autosuggest-search" type="text" placeholder="suchen">
     </form>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-           var browserCodes = document.querySelectorAll(".Browser-code");
-
-           if (browserCodes.length > 2) {
-
-               // We only the to copy the first two views
-               for (var index = 0; index < 2; index++) {
-                   var element = document.createElement("input");
-                   element.type = "button"
-                   element.value = "clone"
-                   element.style.width = "80px"
-                   element.style.height = "40px"
-                   element.style.backgroundColor = "#ccc"
-                   element.style.borderRadius = "5px"
-
-                   element.addEventListener("click", function () {
-
-                       var codeBlock = this.parentElement;
-                       var text = codeBlock.textContent;
-
-                       var textArea = document.createElement("textarea");
-                       textArea.value = text;
-                       document.body.appendChild(textArea);
-                       textArea.select();
-                       document.execCommand("Copy");
-                       textArea.remove();
-                   });
-
-                   browserCodes[index].appendChild(element);
-               }
-           }
-        }, false);
-    </script>
 </div>
